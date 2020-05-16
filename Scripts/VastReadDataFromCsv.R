@@ -35,7 +35,7 @@ for (i in files[-1]){
   df <- df %>% add_column(filenames = a , .before = 1)
   DF <- rbind(DF, df)    # append the current file
 }
-write.csv(DF, "persons_appended.csv", row.names=FALSE, quote=FALSE)
+write.csv(DF, "~/VAST_Challenge/VAST-Mini-Challenge2/Data/Yolo_persons_appended.csv", row.names=FALSE, quote=FALSE)
 # f <- data.frame(f)
 # #writing the appended file  
 
