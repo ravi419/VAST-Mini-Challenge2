@@ -1,2 +1,4 @@
 # VAST-Mini-Challenge2-
-This Repository contains the codes related to mini challenge 2
+## <color=green>This Repository contains the codes</color>related to mini challenge 2
+
+
