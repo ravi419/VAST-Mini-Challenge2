@@ -10,7 +10,7 @@
 library(shiny)
 library(shinydashboard)
 library(shinyFiles)
-# library(shinyjs)
+library(shinyjs)
 
 # Constants
 choice <- NULL # c("default.jpg")
@@ -87,8 +87,8 @@ dBody <- dashboardBody(
                             status = "warning",
                             solidHeader = TRUE,
                             width = 12 #,
-                            #verbatimTextOutput(outputId = "imgName"),
-                            #verbatimTextOutput(outputId = "imgSize")
+                            # verbatimTextOutput(outputId = "imgName"),
+                            # verbatimTextOutput(outputId = "imgSize")
                         )
                     )
                 )
