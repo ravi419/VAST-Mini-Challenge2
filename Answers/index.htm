@@ -678,6 +678,77 @@ To analyse the object to person's distrubution we used wordcloud library in pyth
 		<li>Im still looking for a solid proof to find the suspect group ill get back to you in the evening ..</li></li></ul>
 </div>
 
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
+  <b style='mso-bidi-font-weight:normal'>
+    <i style='mso-bidi-font-style:normal'>
+      <span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:white;mso-highlight:white'>
+        <div class="mycontent">
+          6. Did you choose to use the object recognition model results provided or use your own machine learning algorithm? Why did you make that choice? What was the biggest challenge you faced?&#8239;Please limit your response to 3 images and 300 words.
+        </div>
+      </span>
+    </i>
+  </b>
+  <b style='mso-bidi-font-weight:normal'>
+    <i style='mso-bidi-font-style:normal'>
+      <span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windowtext'>
+        <o:p></o:p>
+      </span>
+    </i>
+  </b>
+</p>
+	
+	
+<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
+	<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
+		<div class="mycontent">
+			Yes, we chose to use the object recognition model results provided for the purpose of the visualization task. We decided to use the given model results as our primary task was to vizualize these results for better interpretation.<br/><br/>
+			The biggest challenge that we faced was to perform the vizulization task. We developed an application which is used to re-classify and compare the classification results of the YOLO Algorithm. The images that are classified by the YOLO Algorithm had sufficient details for us to evalute its performance. With help of our application which is based on python, when an image is opened, there is a provision for drawing bounding boxes and labeling them with the available Label names within the training data. In this application when an image is opened, its corresponding bounding boxes (which are provided by the YOLO algorithm) are projected on them. Thus, this made it easier for us to know whether the image classification was accurate. If the classification is incorrect then we can delete or resize or re-label all the present bounding boxes. With the help of this application we are also able to draw a new bounding box on the image if required. After saving the changes we can immediately know the overall classification and mis-classication rate through our application.<br/><br/>
+			The three images to justify our approach are:<br/>
+			<ul>
+				<li> This image is of Person1_1. In this image [Fig. 1(a)] as we can see a there are around 6 labels classified by the YOLO Algorithm, but none of them is correct. The other image [Fig.1(b)] of the same person, shows how we can delete the irrelevant bounding boxes and create the new one using the application.
+					<div>
+						<figure>
+							<img src="Images/1st_img_no_correct_label.png", alt="Bounding boxes represented by YOLO Algorithm", style="width:100%;margin-top:0%">
+							<figcaption> Fig.1(a) Bounding boxes represented by YOLO Algorithm</figcaption>
+						</figure>
+						<figure>
+							<img src="Images/1st_img_correct_label_manually.png", alt="Bounding boxes rectified manually with the help of our Application", style="width:100%;margin-top:0%">
+							<figcaption> Fig.1(b) Bounding boxes rectified manually with the help of our Application</figcaption>
+						</figure>
+					</div>
+				</li>	
+				
+				<li> This image is of Person14_2. In this image [Fig. 2(a)] as we can see a there is not a single label classified by the YOLO Algorithm, whereas there is a correct label. The other image [Fig.2(b)] of the same person, shows how we manually did the bounding box around the object and classified its label name using the application.
+					<div>
+						<figure>
+							<img src="Images/2nd_img_no_label_identified.png", alt="No bounding box identified by YOLO Algorithm", style="width:100%;margin-top:0%">
+							<figcaption> Fig.2(a) No bounding box identified by YOLO Algorithm</figcaption>
+						</figure>
+						<figure>
+							<img src="Images/2nd_img_label_detected_manually.png", alt="Drew one correct bounding box manually with the help of our Application", style="width:100%;margin-top:0%">
+							<figcaption> Fig.2(b) Drew one correct bounding box manually with the help of our Application</figcaption>
+						</figure>
+					</div>
+				</li>
+				
+				<li> This image is of Person33_5. In this image [Fig. 3(a)] as we can see a there are around 6 label classified by the YOLO Algorithm, whereas there only one label which is correct. The other image [Fig.3(b)] of the same person, shows how we manually re-sized the bounding box around the correct object and deleted the rest of the irrelevant labels using the application.
+					<div>
+						<figure>
+							<img src="Images/3rd_img_multiple labels.png", alt="Multiple bounding boxes are identified by YOLO Algorithm", style="width:100%;margin-top:0%">
+							<figcaption> Fig.3(a) Multiple bounding boxes are identified by YOLO Algorithm</figcaption>
+						</figure>
+						<figure>
+							<img src="Images/3rd_img_only_one _resize_manually.png", alt="Rectified the correct bounding box and deleted the rest of the irrelevant ones manually with the help of our Application", style="width:100%;margin-top:0%">
+							<figcaption> Fig.3(b) Rectified the correct bounding box and deleted the rest of the irrelevant ones manually with the help of our Application</figcaption>
+						</figure>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</span>
+</p>  
+
 
 <div class="mycontent">
 	<i><b>6. Process question: Did you choose to use the object recognition model results provided or use your own machine learning algorithm? 
@@ -699,7 +770,7 @@ images here.
 </div>
 
 
-<
+
 
 <p class=MsoNormal><span style='font-size:11.0pt;font-family:"Calibri",sans-serif;
 mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:
