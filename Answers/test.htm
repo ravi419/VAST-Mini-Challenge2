@@ -11,7 +11,7 @@
 	<link rel=colorSchemeMapping href="VAST%20Challenge%202020%20MC2%20Answer%20Sheet_files/colorschememapping.xml">
 	<style>
 		.mycontent{
-					max-width: 95%;
+					max-width: 90%;
 					margin-left: auto;
 					margin-right: auto;
 					font-family: 'Montserrat';
@@ -379,70 +379,52 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="mycontent">
 					We have used the YOLO algorithm output to examine the results:
 					<br>
-					Approach: To examine any outcome, there should exist a <i>Ground Truth</i>. In order to generate the ground truth, we created a BoundingBox Labeling application through which we have labeled all the 40 Person's images manually ,the application outputs a csv file containing the BoundingBox mesurements i.e x,y points and width,height of the box along with the corresponding label and filename.
-					<br>
+					<b>Approach:</b> To examine any outcome, there should exist a <i>Ground Truth</i>. In order to generate the ground truth, we created a BoundingBox Labeling application through which we have labeled all the 40 Person's images manually ,the application outputs a csv file containing the BoundingBox mesurements i.e x, y points and width, height of the box along with the corresponding label and filename.
+					<br/><br/>
+					Firstly, we compare the distrubution of the labels accross the YOLO algorithm and the Manually Labeled files.
+					<div class="imagepart">
+						<center>
+							<iframe class="ifrbarplt" src="Plots/Counts_Of_Yolo_Predictions.html" ></iframe>
+							<figcaption><b><i> Fig. 1.1 Yolo prediction count of each object</i></b></figcaption>
+							<iframe class="ifrbarplt" src="Plots/Counts_Of_Manual_Predictions.html" ></iframe>
+							<figcaption><b><i> Fig. 1.2 Manual prediction count of each object</i></b></figcaption>
+						</center>
+					</div>
+					
+					After comparing both the figures Fig. 1.1 and Fig. 1.2 we can clearly see that YOLO algorithm did not classify few object class labeles such as BrownDie, FoamDart, GiftBag etc.
+					<br/><br/>
+					Secondly, we check the number of times an Object lable is missclassified by the YOLO algorithmm. Here, we use confusion martix to show missclassification of an object.
+					<div class="imagepart">
+						<center>
+							<figure>
+								<img src="Plots/ConfusionMatrix_Actual_VS_Predicted.png" alt=" Count of YOLO predicted Lables vs Count of Manually Assigned Lables" 
+									 style="width:130%; margin-left:-15%;">
+								<figcaption><b><i> Fig. 1.3 Confusion matrix representation of missclassifications </i></b></figcaption>
+							</figure>
+						</center>
+					</div>
+					
 					<ul>
-						<li> Firstly, we compare the distrubution of the labeles accross YOLO algorithm and the Manually Labeled files.
-							<div class="imagepart">
+						<li> From the above heatmap we can see the number of times an actual label is missclassified by the YOLO algorithm. </li>
+						<li> The most missclassified objects by YOLO are PaperPlate as pumpkinNotes and PartyFavor as Cloud sign. </li>
+						<li> Lets inspect the reason behind this missclassification of PartyFavor as CloudSign.
+							<div>
 								<center>
-									<iframe class="ifrbarplt" src="Plots/Counts_Of_Yolo_Predictions.html" ></iframe>
-									<iframe class="ifrbarplt" src="Plots/Counts_Of_Manual_Predictions.html" ></iframe>
-									<figcaption><b><i> Fig. 1.1 Count of YOLO predicted Lables vs Count of Manually Assigned Lables</i></b></figcaption>
-								
-									<!-- <figure>
-										<img src="Plots/Lable_Comparision_YOLO_VS_Manual.png" alt=" Count of YOLO predicted Lables vs Count of Manually Assigned Lables" style="width:100%;margin-top:0%">
-										<figcaption > Fig.1 Count of YOLO predicted Lables vs Count of Manually Assigned Lables.</i></b</figcaption>
-									</figure> -->
-								</center>
-							</div>
-							<div class="mycontent">
-								<ul>
-									<li>On X-axis: Object Lables</li>
-									<li>On Y-axis: No of Occurences</li>
-									<li>From the above Barchart we can clearly see that YOLO algorithm has completely did not classify or missclassified few object class labeles namely <i>BrownDie, FoamDart, GiftBag etc.</i></li>
-								</ul>
-							</div>
-						</li>
-						<br/>
-						<li>Secondly, we check the number of times an Object lable is missclassified by the YOLO algorithmm. Here, we use confusion martix to show missclassification of an object.
-							<div class="imagepart">
-								<center>
-									<figure>
-										<img src="Plots/ConfusionMatrix_Actual_VS_Predicted.png" alt=" Count of YOLO predicted Lables vs Count of Manually Assigned Lables" 
-											 style="width:130%; margin-left:-15%;">
-										<figcaption><b><i> Fig. 1.2 Confusion matrix representation of missclassifications</i></b></figcaption>
-									</figure>
-								</center>
-							</div>
-							<div class="mycontent">
-								<ul>
-									<li>On X-axis: Yolo Classified Lables</li>
-									<li>On Y-axis: Actual Lables</li>
-									<li>From the above Heatmap we can see the number of times an actual label is missclassified by YOLO algorithm.</li>
-									<li>The most missclassified objects by YOLO are PaperPlate is missclassified as pumpkinNotes and PartyFavor as Cloud sign.</li>
-									<li>Lets inspect the reason behind this missclassification of PartyFavor as CloudSign.
-										<div>
-											<center>
-												<div class="row">
-													<div class="column">
-														<img src="Plots/partyFavor.jpg" alt="Snow" style="width:100%">
-														<figcaption><b><i> Fig. 1.3(a) PartyFavor</i></b></figcaption>
-													</div>
-													<div class="column">
-														<img src="Plots/cloudSign.jpg" alt="Forest" style="width:100%">
-														<figcaption><b><i> Fig. 1.3(b) CloudSign</i></b></figcaption>
-													</div>
-												</div>
-											</center>
+									<div class="row">
+										<div class="column">
+											<img src="Plots/partyFavor.jpg" alt="Snow" style="width:100%">
+											<figcaption><b><i> Fig. 1.4(a) PartyFavor</i></b></figcaption>
 										</div>
-									</li>
-									<li>From the above images we can see that the YOLO algorithm has confused with the <i>Golden</i> structure of PartyFavor as CloudSign.
-									</li>
-								</ul>
+										<div class="column">
+											<img src="Plots/cloudSign.jpg" alt="Forest" style="width:100%">
+											<figcaption><b><i> Fig. 1.4(b) CloudSign</i></b></figcaption>
+										</div>
+									</div>
+								</center>
 							</div>
 						</li>
-						
-						<li>Further, we tried to visualise the objects that are correctly and incorrectly classified images by the YOLO algorithm</li>
+						<li> From the above images we can see that the YOLO algorithm has been confused with the Golden structure of PartyFavor as CloudSign. </li>
+						<li> Further, we tried to visualise the objects that are correctly and incorrectly classified in the images by the YOLO algorithm. </li>
 					</ul>
 				</div>
 				<span style='mso-spacerun:yes'>  </span>
@@ -451,6 +433,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<o:p></o:p>
 			</span>
 		</p>
+		<br/>
 		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
 			<b style='mso-bidi-font-weight:normal'>
 				<i style='mso-bidi-font-style:normal'>
@@ -473,45 +456,42 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
 				<div class="mycontent">
-					With the <i>Groud Truth</i> that we prepared earlier, we followed the followed certain analysis steps to determine the classification errors and correcting the missclassifications by our tool
+					With the <i>Groud Truth</i> that we prepared earlier, we followed the followed certain analysis steps to determine the classification errors and correcting the missclassifications by our tool.
 					<ul>
-						<li>After merging the all 40 person's data into a single dataframe, we are checking each person's file with the corresponding <i>Ground Truth</i> file person's name. If the ground truth lable matches with the YOLO algorithm labels further to increase the certainity in the process, we are also examining the area of intersection of YOLO classified image BoundingBox dimentions with the respective <i>Ground Truth</i> (Manually Labeled) image BoundingBox dimentions as shown in below image.
+						<li>After merging the all 40 person's data into a single dataframe, we are checking each person's file with the corresponding <i>Ground Truth</i> file person's name. If the ground truth label matches with the YOLO algorithm labels, then we are examining the area of intersection of the YOLO classified image BoundingBox dimentions with the respective <i>Ground Truth</i> (Manually Labeled) image bounding box dimentions. This we are performing to increase the certainity of the process. Fig. 2.1 shows bounding boxes of YOLO classifier and manually labeled.
 							<div class="imagepart">
 								<center>
-									<div class="row">
-										<img src="Plots/YellowBallon.png" alt="Snow" style="width:100%">
-										<figcaption><b><i> Fig. 2.1 Yellow Baloon</i></b></figcaption>
-									</div>
+									<img src="Plots/YellowBallon.png" alt="Snow" style="width:100%">
+									<figcaption><b><i> Fig. 2.1 Yellow Baloon</i></b></figcaption>
+									<i>
+										<ul>
+											<li> Blue bounding box: Yolo Classified BBox </li>
+											<li> Green bounding box: Manually Classified BBox </li>
+										</ul>
+									</i>
 								</center>
-							</div>
-							<br>
-							<div class="mycontent">
-								<ul>
-									<li>Blue BoundingBox: Yolo Classified BBox</li>
-									<li>Green BoundingBox: Manually Classified BBox</li>
-								</ul>
 							</div>
 						</li>
-						<li>We have used Shape library in Python which compares 2 polygon shapes and results in the area of intersection of both the BoundingBoxes. Here, we have set the criteria of 30%.
+						<li>We have used Shape library in Python which compares two polygon shapes and results in the area of intersection of both the BoundingBoxes. Here, we have set the criteria of 30%.
 							<ul>
-								<li> If the intersection area of Manually labeled BoundingBox to the YOLO labeled BoundingBox is greater than 0.3 then we declare that the Image is correctly classified by YOLO and we store the labele and its count in a Dataframe </li>
-								<li> If the intersection area is less than 30% we say the label is missclassified by YOLO algorithm and we store the resultant label in dataframe , below we can see the count of correct, incorrect classified labels and respective correctly ,incorrectly classified image count.</li>
+								<li> If the intersection area of manually labeled bounding box to the YOLO labeled bounding box is greater than 30%, then we declare that the Image is correctly classified by the YOLO and we store the label and its count in a dataframe. </li>
+								<li> If the intersection area is less than 30%, we say that the label is missclassified by YOLO algorithm and we store the resultant label in dataframe. Below we can see the count of correct(Fig. 2.2), incorrect classified labels and respective correctly, incorrectly classified image count(Fig. 2.3). </li>
 								<center>
 									<iframe class="ifrbarplt" src="Plots/YOLO_Classified_Labels.html"></iframe>
-									<figcaption><b><i> Fig. 2.2 Correct Classified Lables vs Missclassified Lables Count</i></b></figcaption>
+									<figcaption><b><i> Fig. 2.2 Correct classified lables vs. missclassified lables count </i></b></figcaption>
 								</center>
-								<li>From the above image we can see the YOLO classified and missclassified labels count, count of Correctly classified labels are 516 vs Incorrectly Classified Labeles are 2493 </li>
+								<li> From the above image we can see the YOLO classified and missclassified labels count, count of correctly classified labels are 516 vs. incorrectly classified labeles are 2493. </li>
 								<center>
 									<iframe class="ifrbarplt" src="Plots/YOLO_Classified_Images.html"></iframe>
 									<figcaption><b><i> Fig. 2.3 Manual Image Files vs Yolo Image Files Count</i></b></figcaption>
 								</center>
-								<li>From the above image we can see YOLO Files(images) count. The count of images which are classified correctly are 223 vs incorrect classifications are 711.</li>
+								<li> From the above image we can see YOLO files (images) count. The count of images which are classified correctly are 223 vs. incorrect classifications are 711. </li>
 							</ul>
 						</li>
 						
-						<li> After examining the above results, we tried to run the analysis again, now setting the criteria ass 0% but the count was same for bothe the lables and image files, therefore we can say that the dimentions of correctly classified labels are correct.</li>
+						<li> After examining the above results, we tried to run the analysis again, now setting the criteria as 0% but the count was same, for both the lables and image files. Therefore we can say that the dimentions of correctly classified labels are correct. </li>
 						
-						<li> Further, we analysed the distrubution of Correctly classified BoundingBox and Labels with the Incorrectly classified Labels but Correct Bounding Box dimentions, along with Bounding box completely not detected in a pie chart as shown below,
+						<li> Further, we analyzed the distribution of correctly classified bounding box and Labels with the incorrectly classified labels but correct bounding box dimensions, along with bounding box completely not detected in a pie chart as shown below,
 							<div class="imagepart">
 								<center>
 									<iframe class="ifrclss" src="Plots/Pie_Chart_BB_Detection_Distrubution.html" ></iframe>
@@ -520,7 +500,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 							</div>
 						</li>
 						
-						<li>With the above analysis information we plotted a bar chart where we can know the correctness of YOLO algorithm object classifications results. The bar chart below shows the perormance of YOLO algorithm.
+						<li> With the above analysis information we plotted a bar chart where we can see the number of correctly and incorrectly classified results. The bar chart below shows the perormance of YOLO algorithm. 
 							<!--<div class="row">
 								<center>
 									<img src="Plots/Good_vs_Poor_classification.png" alt="Snow" style="width:100%">
@@ -538,22 +518,22 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						<li>To correct the classification errors, we have created an interactive application for the users. This application:
 							<ul><!-- IMAGES to be added by NIHA -->
 								<!-- Please Add 3-4 Images of the application along with a brief description , H ere ii have added bullet point descriptions u caan modify this txt and add images-->
-								<li> The application allows the user to browse to the directory of the images.</li>
-								<li> The user is then shown the list of missclassified files.</li>
-								<li> When the first image is loaded on the canvas, its corresponding YOLO classified Labels are also projected on the image along with the BoundingBox measurements from the corresponding .csv.
-								<li> The bounding boxes are color coded inorder to give them a distinction mark.</li>
-								<li> On the right side of the application, the label names of those color encoded bounding box are shown.</li>
-								<li> The user has complete access to the bounding boxes. The user can verform the following operations:
+								<li> Allows the user to browse to the directory of the images. </li>
+								<li> The user is then shown the list of missclassified files. </li>
+								<li> When the first image is loaded on the canvas, its corresponding YOLO classified labels are also projected on the image along with the bounding box measurements.
+								<li> The bounding boxes are color-coded to give them a distinction mark. </li>
+								<li> On the right side of the application, the label names of those color encoded bounding box are shown. </li>
+								<li> The user has complete access to the bounding boxes. The user can perform the following operations:
 									<ul>
-										<li> <b> DRAW - </b>If there are no bounding boxes detected by YOLO Algorithm on an image, the user can draw one and label it accordingly.</li>
+										<li> <b> DRAW - </b>If there are no bounding boxes detected by YOLO Algorithm on an image, the user can draw one and label it accordingly. </li>
 										<li> <b> DELETE - </b>If there are irrelevant bounding boxes, the user can delete them.</li>
 										<li> <b> RESIZE - </b>If the bounding boxes are not of accurate size given to the image, the user re-size them.</li>
 										<li> <b> EDIT - </b>If the user gave a wrong label name to a drawn bounding box, then he/she can re-lable it by editing the labels.</li>
 									</ul>
 								</li>
-								<li> Once the image is labeled, the filename, BoundingBox ,label are stored in the csv file from which it has been fetched.</li>
-								<li> We provide an option for the user to run the above discussed analysis and the result will be the increase in Correct classification by 1</li>
-								<li> The application also has the provision of zooming (+/-) the images to give better insight on the image.</li>
+								<li> Once the image is labeled, the filename, bounding box and the label are stored in the csv file from which it has been fetched. </li>
+								<li> We provide an option for the user to run the above discussed analysis and the result will be the increase in Correct classifications by one. </li>
+								<li> The application also has the provision of zooming (+/-) the images to give better insight on the image. </li>
 							</ul>
 						</li>
 					</ul>
@@ -856,7 +836,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 							</div>
 						</li>
 
-						<li> This image is of Person33_5. In this image [Fig. 5.3(a)] as we can see a there are around 6 label classified by the YOLO Algorithm, whereas there only one label which is correct. The other image [Fig. 5.3(b)] of the same person, shows how we manually re-sized the bounding box around the correct object and deleted the rest of the irrelevant labels using the application.
+						<li> This image is of Person33_5. In this image [Fig. 5.3(a)] as we can see a there are around 6 labels classified by the YOLO Algorithm, whereas there only one correct label. The other image [Fig. 5.3(b)] of the same person, shows how we manually re-sized the bounding box around the correct object and deleted the rest of the irrelevant labels using the application.
 							<div>
 								<center>
 									<figure>
