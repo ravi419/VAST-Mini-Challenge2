@@ -153,7 +153,7 @@ minor-latin;mso-bidi-theme-font:minor-latin'>
 					niha14mohanty@ovgu.de
 				</span>
 			</a>
-			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:yellow;mso-highlight:yellow;mso-bidi-font-style:italic'> </span>
+			<!-- <span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:yellow;mso-highlight:yellow;mso-bidi-font-style:italic'> </span>
 			<i>
 				<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
 					<br/><br/>
@@ -165,7 +165,7 @@ minor-latin;mso-bidi-theme-font:minor-latin'>
 			</i>
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
 				<o:p></o:p>
-			</span>
+			</span> -->
 		</p>
 		<p class=MsoNormal>	<b style='mso-bidi-font-weight:normal'>
 				<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
@@ -182,12 +182,6 @@ minor-latin;mso-bidi-theme-font:minor-latin'>
 					<o:p></o:p>
 				</i>
 			</span>
-		</p>
-		<p class=MsoNormal>	<i style='mso-bidi-font-style:normal'>
-				<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
-					<o:p>&nbsp;</o:p>
-				</span>
-			</i>
 		</p>
 		
 		<h3 style='margin:0in;margin-bottom:.0001pt'>
@@ -211,7 +205,7 @@ minor-latin;mso-bidi-theme-font:minor-latin'>
 		</p>
 		<p class=MsoNormal>
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:white;mso-highlight:white;mso-bidi-font-style:italic'>
-				PLotly
+				Plotly
 				<o:p></o:p>
 			</span>
 		</p>
@@ -221,7 +215,9 @@ minor-latin;mso-bidi-theme-font:minor-latin'>
 			</span>
 			<br/><br/>
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:white;mso-highlight:yellow;mso-bidi-font-style:italic'>
-				We also created an application for drawing the bounding box and giving the corresponding label to it. The basic structure was taken from we modified the application with more advanced features and we also tried integrated it with the python code which calculates the correct classification and incorrect classifications. Refer:
+				We also created an application for drawing the bounding box and giving the corresponding label to it. The basic structure was taken from a online source. We modified the application with more advanced features and we also tried integrated it with the python code which calculates the correct classification and incorrect classifications.
+				<br/><br/>
+				Referce to the source:
 			</span>
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-hansi-theme-font:minor-latin;background:white;mso-highlight:yellow'>
 				<a href="https://github.com/tzutalin/labelImg">
@@ -378,24 +374,24 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="mycontent">
 					We have used the YOLO algorithm output to examine the results:
 					<br>
-					<b>Approach:</b> To examine any outcome, there should exist a <i>Ground Truth</i>. In order to generate the ground truth, we created a BoundingBox Labeling application through which we have labeled all the 40 Person's images manually ,the application outputs a csv file containing the BoundingBox mesurements i.e x, y points and width, height of the box along with the corresponding label and filename.
+					<b>Approach:</b> To examine any outcome, there should exist a <i>Ground Truth</i>. In order to generate the ground truth, we created a bounding box Labeling application through which we have labeled all the 40 person's images manually ,the application outputs a csv file containing the BoundingBox mesurements i.e x, y points and width, height of the box along with the corresponding label and filename.
 					<br/><br/>
-					Firstly, we compare the distribution of the labels accross the YOLO algorithm and the Manually Labeled files.
+					Firstly, we compare the distribution of the labels accross the YOLO algorithm and the manually labeled files.
 				</div>
 				
 				<div class="imagepart">
 					<center>
 						<iframe class="ifrbarplt" src="Plots/Counts_Of_Yolo_Predictions.html" ></iframe>
-						<figcaption><b><i> Fig. 1.1 Yolo prediction count of each object</i></b></figcaption>
+						<figcaption><b><i> Figure 1.1 Yolo prediction count of each object.</i></b></figcaption>
 						<iframe class="ifrbarplt" src="Plots/Counts_Of_Manual_Predictions.html" ></iframe>
-						<figcaption><b><i> Fig. 1.2 Manual prediction count of each object</i></b></figcaption>
+						<figcaption><b><i> Figure 1.2 Manual prediction count of each object.</i></b></figcaption>
 					</center>
 				</div>
 				
 				<div class="mycontent">
-					After comparing both the figures Fig. 1.1 and Fig. 1.2 we can clearly see that YOLO algorithm did not classify few object class labeles such as BrownDie, FoamDart, GiftBag etc.
+					After comparing Figure 1.1 and Figure 1.2, we can clearly see that YOLO algorithm did not classify few object class labeles such as BrownDie, FoamDart, GiftBag etc.
 					<br/><br/>
-					Secondly, we check the number of times an Object label is misclassified by the YOLO algorithm. Here, we use the confusion matrix to show the misclassification of an object.
+					Secondly, we check the number of times an object label is misclassified by the YOLO algorithm. Here, we use the confusion matrix to show the misclassification of an object.
 				</div>
 				
 				<div class="imagepart">
@@ -403,19 +399,16 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						<figure>
 							<img src="Images/ConfusionMatrix_Actual_VS_Predicted.png" alt=" Count of YOLO predicted Lables vs Count of Manually Assigned Lables" 
 								 style="width:130%; margin-left:-15%;">
-							<figcaption><b><i> Fig. 1.3 Confusion matrix representation of missclassifications </i></b></figcaption>
+							<figcaption><b><i> Figure 1.3 Confusion matrix representation of missclassifications. </i></b></figcaption>
 						</figure>
 					</center>
 				</div>
 				
 				<div class="mycontent">
+					From the above heatmap we can see the number of times an actual label is misclassified by the YOLO algorithm. The most misclassified objects by YOLO are paperPlate as pumpkinNotes and partyFavor as cloudSign. Lets inspect the reason behind the missclassifications:
+					
 					<ul>
-						<li> From the above heatmap we can see the number of times an actual label is misclassified by the YOLO algorithm. </li>
-						<li> The most misclassified objects by YOLO are paperPlate as pumpkinNotes and partyFavor as cloudSign. </li>
-						<li> Lets inspect the reason behind the missclassifications: </li>
-						<ul>
-							<li> The Fig. 1.3 shows us, that paperPlate has been misclassified 82 times as pumpkinNotes. The given images (Fig. 1.4(a) &ampsand; Fig. 1.4(b)) below shows us the comparison between paperPlate and pumpkinNotes. The reason for this misclassification could be the smiley face on both the images.</li>
-						</ul>
+						<li> The Figure 1.3 shows us, that paperPlate has been misclassified 82 times as pumpkinNotes. The given images (Figure 1.4(a) &ampsand; Figure 1.4(b)) below shows us the comparison between paperPlate and pumpkinNotes. The reason for this misclassification could be the smiley face on both the images.</li>
 					</ul>
 				</div>
 				
@@ -424,11 +417,11 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						<div class="row">
 							<div class="column">
 								<img src="Images/paperPlate.png" alt="paperPlate" style="width:70%;">
-								<figcaption><b><i> Fig. 1.4(a) paperPlate</i></b></figcaption>
+								<figcaption><b><i> Figure 1.4(a) paperPlate</i></b></figcaption>
 							</div>
 							<div class="column">
 								<img src="Images/pumpkinNotes.png" alt="pumpkinNotes" style="width:70%; height:60%;">
-								<figcaption><b><i> Fig. 1.4(b) pumpkinNotes</i></b></figcaption>
+								<figcaption><b><i> Figure 1.4(b) pumpkinNotes</i></b></figcaption>
 							</div>
 						</div>
 					</center>
@@ -439,11 +432,11 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						<div class="row">
 							<div class="column">
 								<img src="Images/partyFavor.jpg" alt="partyFavor" style="width:100%">
-								<figcaption><b><i> Fig. 1.5(a) partyFavor</i></b></figcaption>
+								<figcaption><b><i> Figure 1.5(a) partyFavor</i></b></figcaption>
 							</div>
 							<div class="column">
 								<img src="Images/cloudSign.jpg" alt="cloudSign" style="width:100%">
-								<figcaption><b><i> Fig. 1.5(b) cloudSign</i></b></figcaption>
+								<figcaption><b><i> Figure 1.5(b) cloudSign</i></b></figcaption>
 							</div>
 						</div>
 					</center>
@@ -451,11 +444,9 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				
 				<div class="mycontent">
 					<ul>
-						<ul>
-							<li> The Fig. 1.3 shows us, that partyFavor has been misclassified 81 times as cloudSign. The given images (Fig. 1.5(a) &ampsand; Fig. 1.5(b)) above shows us the comparison between partyFavor and cloudSign. The reason for this misclassification could be the golden glitters present on the cloudSign.</li>
-						</ul>
-						<li> Further, we tried to visualise the objects that are correctly and incorrectly classified in the images by the YOLO algorithm. </li>
+						<li> The Figure 1.3 shows us, that partyFavor has been misclassified 81 times as cloudSign. The given images (Figure 1.5(a) &ampsand; Figure 1.5(b)) above shows us the comparison between partyFavor and cloudSign. The reason for this misclassification could be the golden glitters present on the cloudSign.</li>
 					</ul>
+					Further, we tried to visualise the objects that are correctly and incorrectly classified in the images by the YOLO algorithm.
 				</div>
 			</span>
 		</p>
@@ -477,18 +468,18 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="mycontent">
 					With the <i>Groud Truth</i> that we prepared earlier, we followed the followed certain analysis steps to determine the classification errors and correcting the missclassifications by our tool.
 					<ul>
-						<li>After merging the all 40 person's data into a single dataframe, we are checking each person's file with the corresponding <i>Ground Truth</i> file person's name. If the ground truth label matches with the YOLO algorithm labels, then we are examining the area of intersection of the YOLO classified image BoundingBox dimentions with the respective <i>Ground Truth</i> (Manually Labeled) image bounding box dimentions. This we are performing to increase the certainity of the process. Fig. 2.1 shows bounding boxes of YOLO classifier and manually labeled. </li>
+						<li>After merging the all 40 person's data into a single dataframe, we are checking each person's file with the corresponding <i>Ground Truth</i> file person's name. If the ground truth label matches with the YOLO algorithm labels, then we are examining the area of intersection of the YOLO classified image's bounding box dimentions with the respective <i>Ground Truth</i> (manually labeled) image bounding box dimensions. This we are performing to increase the certainity of the process. Figure 2.1 shows bounding boxes of YOLO classifier and manually labeled. </li>
 					</ul>
 				</div>
 				
 				<div class="imagepart">
 					<center>
 						<img src="Images/YellowBallon.png" alt="Snow" style="width:70%; height:80%">
-						<figcaption><b><i> Fig. 2.1 Yellow Baloon</i></b></figcaption>
+						<figcaption><b><i> Figure 2.1 Yellow Baloon</i></b></figcaption>
 						<i>
 							<ul>
-								<li> Blue bounding box: Yolo Classified BBox </li>
-								<li> Green bounding box: Manually Classified BBox </li>
+								<li> Blue bounding box: Yolo Classified BBox. </li>
+								<li> Green bounding box: Manually Classified BBox. </li>
 							</ul>
 						</i>
 					</center>
@@ -499,7 +490,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						<li>We have used Shape library in Python which compares two polygon shapes and results in the area of intersection of both the BoundingBoxes. Here, we have set the criteria of 30%. Here, we choose to have a low threshold because sometimes the YOLO algorithm draws/detects the bounding box over only a portion of the actual object and we choose to consider such cases as good cases. We also tried even lower thresholds, but there was no significant improvement in the number of good cases, so we set the threshold at 30%.
 							<ul>
 								<li> If the intersection area of manually labeled bounding box to the YOLO labeled bounding box is greater than 30%, then we declare that the Image is correctly classified by the YOLO and we store the label and its count in a dataframe. </li>
-								<li> If the intersection area is less than 30%, we say that the label is missclassified by YOLO algorithm and we store the resultant label in dataframe. Below we can see the count of correct, incorrect classified labels (Fig. 2.2) and respective correctly, incorrectly classified image count(Fig. 2.3). </li>
+								<li> If the intersection area is less than 30%, we say that the label is missclassified by YOLO algorithm and we store the resultant label in dataframe. Below we can see the count of correct, incorrect classified labels (Figure 2.2) and respective correctly, incorrectly classified image count (Figure 2.3). </li>
 							</ul>
 						</li>
 					</ul>
@@ -508,7 +499,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">								
 					<center>
 						<iframe class="ifrbarplt" src="Plots/YOLO_Classified_Labels.html" style="width:60%; height:80%"></iframe>
-						<figcaption><b><i> Fig. 2.2 Correct classified lables vs. Missclassified lables count </i></b></figcaption>
+						<figcaption><b><i> Figure 2.2 Correct classified lables vs. Missclassified lables count. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -523,7 +514,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<iframe class="ifrbarplt" src="Plots/YOLO_Classified_Images.html" style="width:60%; height:80%"></iframe>
-						<figcaption><b><i> Fig. 2.3 Manual image files vs. Yolo image files count</i></b></figcaption>
+						<figcaption><b><i> Figure 2.3 Manual image files vs. Yolo image files count. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -535,14 +526,14 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 						
 						<li> After examining the above results, we tried to run the analysis again, now setting the criteria as 0% but the count was the same, for both the labels and image files. Therefore we can say that the dimensions of correctly classified labels are correct. </li>
 						
-						<li> Further, we analyzed the distribution of correctly classified bounding box and Labels with the incorrectly classified labels but correct bounding box dimensions, along with bounding box completely not detected in a pie chart as shown below, </li>
+						<li> Further, we analyzed the distribution of correctly classified bounding box and labels with the incorrectly classified labels but correct bounding box dimensions, along with bounding box completely not detected in a pie chart as shown below, </li>
 					</ul>
 				</div>
 				
 				<div class="imagepart">
 					<center>
 						<iframe class="ifrclss" src="Plots/Pie_Chart_BB_Detection_Distrubution.html" ></iframe>
-						<figcaption><b><i> Fig. 2.4 Pie Chart for bounding box detection distribution</i></b></figcaption>
+						<figcaption><b><i> Figure 2.4 Pie Chart for bounding box detection distribution. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -555,7 +546,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<iframe class="ifrbarplt" src="Plots/Good_vs_Poor_Classification.html" ></iframe>
-						<figcaption><b><i> Fig. 2.5 Good vs. Poor classification</i></b></figcaption>
+						<figcaption><b><i> Figure 2.5 Good vs. Poor classification. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -615,7 +606,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 					</ol>
 					
 					<ul>
-						<li> The image below (Fig. 3(a).1) represents the heatmap for the Persons against Labels. </li>
+						<li> The image below (Figure 3(a).1) represents the heatmap for the Persons against Labels. </li>
 					</ul>
 				</div>
 				
@@ -623,7 +614,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 					<center>
 						<figure>
 							<img src="Images/Persons_VS_LabelsDistribution.png" alt="Heatmap for Persons vs. Labels" style="width:130%; margin-left:-10%;">
-							<figcaption><b><i>Fig. 3(a).1 Persons vs. Labels distribution </i></b></figcaption>
+							<figcaption><b><i>Figure 3(a).1 Persons vs. Labels distribution. </i></b></figcaption>
 						</figure>
 					</center>
 				</div>
@@ -637,7 +628,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_1-6Persons.png" alt="word cloud for first six person" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).2 WordClouds representations of labels accociated to Person1 - Person6</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).2 WordClouds representations of labels accociated to Person1 - Person6. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -654,7 +645,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_6-12Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).3 WordClouds representations of labels accociated to Person7 - Person12</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).3 WordClouds representations of labels accociated to Person7 - Person12. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -671,7 +662,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_12-18Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).4 WordClouds representations of labels accociated to Person13 - Person18</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).4 WordClouds representations of labels accociated to Person13 - Person18. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -688,7 +679,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_18-24Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).5 WordClouds representations of labels accociated to Person19 - Person24</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).5 WordClouds representations of labels accociated to Person19 - Person24. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -705,7 +696,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_24-30Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).6 WordClouds representations of labels accociated to Person25 - Person30</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).6 WordClouds representations of labels accociated to Person25 - Person30. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -718,7 +709,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_30-36Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).7 WordClouds representations of labels accociated to Person31 - Person36</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).7 WordClouds representations of labels accociated to Person31 - Person36. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -731,7 +722,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/WordCloud_36-40Persons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 3(a).8 WordClouds representations of labels accociated to Person37 - Person40</i></b></figcaption>
+						<figcaption><b><i>Figure 3(a).8 WordClouds representations of labels accociated to Person37 - Person40. </i></b></figcaption>
 					</center>
 				</div>
 			</span>
@@ -767,7 +758,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="interactiveImagePart">
 					<center>
 						<iframe class="ifnetworkclss" src="Plots/1_object_common.html"></iframe>
-						<figcaption><b><i>Fig. 3(b).1 Interactive Plot for Objects to Persons</i></b></figcaption>
+						<figcaption><b><i>Figure 3(b).1 Interactive Plot for Objects to Persons. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -785,7 +776,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="interactiveImagePart">
 					<center>
 						<iframe class="ifnetworksmallclss" src="Plots/2_objects_common.html"></iframe>
-						<figcaption><b><i>Fig. 3(b).2 Interactive Plot for two Objects</i></b></figcaption>
+						<figcaption><b><i>Figure 3(b).2 Interactive Plot for two Objects. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -800,7 +791,7 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="interactiveImagePart">
 					<center>
 						<iframe class="ifnetworksmallclss" src="Plots/3_objects_common.html"></iframe>
-						<figcaption><b><i>Fig. 3(b).3 Interactive Plot for three Objects</i></b></figcaption>
+						<figcaption><b><i>Figure 3(b).3 Interactive Plot for three Objects. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -815,13 +806,14 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="interactiveImagePart">
 					<center>
 						<iframe class="ifnetworksmallclss" src="Plots/4_objects_common.html"></iframe>
-						<figcaption><b><i>Fig. 3(b).4 Interactive Plot for four Objects</i></b></figcaption>
+						<figcaption><b><i>Figure 3(b).4 Interactive Plot for four Objects. </i></b></figcaption>
 					</center>
 				</div>
 			</span>
 		</p>
 		<br>
-		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>	<b style='mso-bidi-font-weight:normal'>
+		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
+			<b style='mso-bidi-font-weight:normal'>
 				<i style='mso-bidi-font-style:normal'>
 					<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin;background:white;mso-highlight:white'>
 						<div class="mycontent">
@@ -832,7 +824,8 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 			</b>
 		</p>
 		<br>
-		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>	<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
+		<p class=MsoNormal style='mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;margin-left:.25in;background:white'>
+			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
 				<div class="mycontent">
 					From the hint given in the challenge, we came to know that the analysis of the cyber event gave a strong indication that a subgroup of eight individuals were behind the bug. We rule out the cases where less than 8 persons have an item.
 					<br/><br/>
@@ -842,32 +835,32 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 				<div class="imagepart">
 					<center>
 						<img src="Images/ObjectsAssociatedToPersons.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 4.1 Count of Persons per object</i></b></figcaption>
+						<figcaption><b><i>Figure 4.1 Count of Persons per object. </i></b></figcaption>
 					</center>
 				</div>
 			
 				<div class="mycontent">
-					If an outsider person has the totem it does not serve the purpose of secret signal anymore. Thus we filter the scenarios where an item is present exactly among 8 persons. So, we have ruled out the cases where more than eight persons have a common item. We have five such items which are shown in figure below.
+					If an outsider person has the totem it does not serve the purpose of secret signal anymore. Thus we filter the scenarios where an item is present exactly among 8 persons. So, we have ruled out the cases where more than eight persons have a common item. We have five such items which are shown in Figure 4.2.
 				</div>
 				
 				<div class="imagepart">
 					<center>
 						<img src="Images/Potential_totem_items.png" alt="Snow" style="width:100%">
-						<figcaption><b><i>Fig. 4.2 Potential totem's perperso</i></b></figcaption>
+						<figcaption><b><i>Figure 4.2 Potential totem's perperso. </i></b></figcaption>
 					</center>
 				</div>
 				
 				<div class="mycontent">
 					<ul>
 						<li> From the above plot, it is worth noting here that the persons 5, 9, 10, 13, 16, 18, 19, 24, 26, 27, 29, 32, 33 do not have any of these 5 items and therefore are not among the secret group. </li>
-						<li> Based on the number of items each person has among these 5 potential items, we calculated the probability of each of the 40 persons belonging to the secret group, shown in the figure.</li>
+						<li> Based on the number of items each person has among these 5 potential items, we calculated the probability of each of the 40 persons belonging to the secret group, shown in the Figure 4.3.</li>
 					</ul>
 				</div>
 				
 				<div class="imagepart">
 					<center>
 						<iframe class="ifrbarplt" src="Plots/Probability_person_belonging_to secret_group.html" ></iframe>
-						<figcaption><b><i> Fig. 4.3 Probability that a person belongs to crime group</i></b></figcaption>
+						<figcaption><b><i> Figure 4.3 Probability that a person belongs to crime group. </i></b></figcaption>
 					</center>
 				</div>
 				
@@ -900,10 +893,10 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 			<span style='font-size:11.0pt;font-family:"Calibri",sans-serif;mso-ascii-theme-font:minor-latin;mso-fareast-font-family:"Times New Roman";mso-hansi-theme-font:minor-latin;mso-bidi-theme-font:minor-latin'>
 				<div class="mycontent">
 					Yes, we chose to use the object recognition model results provided for the purpose of the visualization task. We decided to use the given model results as our primary task was to vizualize these results for better interpretation.<br/><br/>
-					The biggest challenge that we faced was to perform the vizulization task. We developed an application which is used to re-classify and compare the classification results of the YOLO Algorithm. The images that are classified by the YOLO Algorithm had sufficient details for us to evalute its performance. With help of our application which is based on python, when an image is opened, there is a provision for drawing bounding boxes and labeling them with the available Label names within the training data. In this application when an image is opened, its corresponding bounding boxes (which are provided by the YOLO algorithm) are projected on them. Thus, this made it easier for us to know whether the image classification was accurate. If the classification is incorrect then we can delete or resize or re-label all the present bounding boxes. With the help of this application we are also able to draw a new bounding box on the image if required. After saving the changes we can immediately know the overall classification and mis-classication rate through our application.<br/><br/>
+					The biggest challenge that we faced was to perform the vizulization task. We developed an application which is used to re-classify and compare the classification results of the YOLO algorithm. The images that are classified by the YOLO algorithm had sufficient details for us to evalute its performance. With help of our application which is based on python, when an image is opened, there is a provision for drawing bounding boxes and labeling them with the available Label names within the training data. In this application when an image is opened, its corresponding bounding boxes (which are provided by the YOLO algorithm) are projected on them. Thus, this made it easier for us to know whether the image classification was accurate. If the classification is incorrect then we can delete or resize or re-label all the present bounding boxes. With the help of this application we are also able to draw a new bounding box on the image if required. After saving the changes we can immediately know the overall classification and mis-classication rate through our application.<br/><br/>
 					The three images to justify our approach are:<br/>
 					<ul>
-						<li> This image is of Person1_1. In this image [Fig. 5.1(a)] as we can see a there are around 6 labels classified by the YOLO Algorithm, but none of them is correct. The other image [Fig. 5.1(b)] of the same person, shows how we can delete the irrelevant bounding boxes and create the new one using the application. </li>
+						<li> This image is of Person1_1. In this image [Figure 5.1(a)] as we can see a there are around 6 labels classified by the YOLO algorithm, but none of them is correct. The other image [Figure 5.1(b)] of the same person, shows how we can delete the irrelevant bounding boxes and create the new one using the application. </li>
 					</ul>
 				</div>
 				
@@ -911,18 +904,18 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 					<center>
 						<figure>
 							<img src="Images/1st_img_no_correct_label.png", alt="Bounding boxes represented by YOLO Algorithm", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.1(a) Bounding boxes represented by the YOLO Algorithm</i></b></figcaption>
+							<figcaption><b><i> Figure 5.1(a) Bounding boxes represented by the YOLO algorithm. </i></b></figcaption>
 						</figure>
 						<figure>
 							<img src="Images/1st_img_correct_label_manually.png", alt="Bounding boxes rectified manually with the help of our Application", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.1(b) Bounding boxes rectified manually with the help of our application</i></b></figcaption>
+							<figcaption><b><i> Figure 5.1(b) Bounding boxes rectified manually with the help of our application. </i></b></figcaption>
 						</figure>
 					</center>
 				</div>
 				
 				<div class="mycontent">
 					<ul>
-						<li> This image is of Person14_2. In this image [Fig. 5.2(a)] as we can see a there is not a single label classified by the YOLO Algorithm, whereas there is a correct label. The other image [Fig. 5.2(b)] of the same person, shows how we manually did the bounding box around the object and classified its label name using the application. </li>
+						<li> This image is of Person14_2. In this image [Figure 5.2(a)] as we can see a there is not a single label classified by the YOLO algorithm, whereas there is a correct label. The other image [Figure 5.2(b)] of the same person, shows how we manually did the bounding box around the object and classified its label name using the application. </li>
 					</ul>
 				</div>
 				
@@ -930,18 +923,18 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 					<center>
 						<figure>
 							<img src="Images/2nd_img_no_label_identified.png", alt="No bounding box identified by YOLO Algorithm", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.2(a) No bounding box identified by the YOLO Algorithm</i></b></figcaption>
+							<figcaption><b><i> Figure 5.2(a) No bounding box identified by the YOLO algorithm. </i></b></figcaption>
 						</figure>
 						<figure>
 							<img src="Images/2nd_img_label_detected_manually.png", alt="Drew one correct bounding box manually with the help of our Application", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.2(b) Drew one correct bounding box manually with the help of our application</i></b></figcaption>
+							<figcaption><b><i> Figure 5.2(b) Drew one correct bounding box manually with the help of our application. </i></b></figcaption>
 						</figure>
 					</center>
 				</div>
 				
 				<div class="mycontent">
 					<ul>
-						<li> This image is of Person33_5. In this image [Fig. 5.3(a)] as we can see a there are around 6 labels classified by the YOLO Algorithm, whereas there only one correct label. The other image [Fig. 5.3(b)] of the same person, shows how we manually re-sized the bounding box around the correct object and deleted the rest of the irrelevant labels using the application. </li>
+						<li> This image is of Person33_5. In this image [Figure 5.3(a)] as we can see a there are around 6 labels classified by the YOLO algorithm, whereas there only one correct label. The other image [Figure 5.3(b)] of the same person, shows how we manually re-sized the bounding box around the correct object and deleted the rest of the irrelevant labels using the application. </li>
 					</ul>
 				</div>
 				
@@ -949,11 +942,11 @@ minor-latin;mso-bidi-theme-font:minor-latin;color:windowtext;mso-color-alt:windo
 					<center>
 						<figure>
 							<img src="Images/3rd_img_multiple labels.png", alt="Multiple bounding boxes are identified by YOLO Algorithm", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.3(a) Multiple bounding boxes are identified by the YOLO Algorithm</i></b></figcaption>
+							<figcaption><b><i> Figure 5.3(a) Multiple bounding boxes are identified by the YOLO algorithm. </i></b></figcaption>
 						</figure>
 						<figure>
 							<img src="Images/3rd_img_only_one _resize_manually.png", alt="Rectified the correct bounding box and deleted the rest of the irrelevant ones manually with the help of our Application", style="width:100%;margin-top:0%">
-							<figcaption><b><i> Fig. 5.3(b) Rectified the correct bounding box and deleted the rest of the irrelevant ones manually with the help of our Application</i></b></figcaption>
+							<figcaption><b><i> Figure 5.3(b) Rectified the correct bounding box and deleted the rest of the irrelevant ones manually with the help of our application. </i></b></figcaption>
 						</figure>
 					</center>
 				</div>
