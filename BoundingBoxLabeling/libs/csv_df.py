@@ -16,15 +16,18 @@ class CSVReaderDF:
         self.__read__()
         
     def deleteRecord(self, filename, shapes):
+
         if filename is not None and shapes is not None:
             fn = filename.split("_")
-            self.dataFrame = self.dataFrame[(self.dataFrame["filenames"] != fn[0]) & (self.dataFrame["num"] != int(float(fn[1])))]
+            temp_df = self.dataFrame[(self.dataFrame["filenames"] == fn[0]) & (self.dataFrame["num"] == int(fn[1]))]
+            self.dataFrame = self.dataFrame[~self.dataFrame.isin(temp_df)]
             for shape in shapes:
                 label = shape['label']
                 bndbox = self.__convertPoints2BndBox__(shape['points'])
                 x, y, width, height = self.__BndBox2Value__(bndbox)
                 new_row = {'filenames':fn[0], 'num':int(fn[1]), 'x':x, 'y':y, 'Width':width, 'Height':height, 'Label':label}
                 self.dataFrame = self.dataFrame.append(new_row, ignore_index=True)
+            print(self.dataFrame.count())
         
     def getDataFrame(self):
         return self.dataFrame
